@@ -35,7 +35,7 @@ el.run_until_complete(gerar_dados(total, dados))
 el.run_until_complete(processando_dados(total * 3, dados))
 el.close()
 
-print(f"PARALELO")
+print("PARALELO")
 
 total = 5_000
 dados = Queue()
