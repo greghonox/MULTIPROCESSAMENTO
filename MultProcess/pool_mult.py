@@ -5,7 +5,7 @@ def pegar_nome_processo():
     print(f"NOME DO PROCESSO {current_process().name}")
 
 
-def calcular(dado):
+def calcular(dado, x):
     return dado ** 2
 
 
@@ -15,7 +15,7 @@ def main():
     print(f"TAMANHO DA POOL {tm_pool}")
     pool = Pool(processes=tm_pool, initializer=pegar_nome_processo)
 
-    entradas = list(range(7))
+    entradas = list(range(7)), 1
     saidas = pool.map(calcular, entradas)
 
     print(f"SAIDAS: {saidas}")
